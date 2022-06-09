@@ -33,7 +33,7 @@ use Psr\Container\ContainerInterface;
 
      public function default(Request $request, Response $response, $args):Response
      {
-         $userId =  ($this->ci->get('session')->get('userId')) ? ($this->ci->get('session')->get('userId')) : ($args['userId']);
+         //$userId =  ($this->ci->get('session')->get('userId')) ? ($this->ci->get('session')->get('userId')) : ($args['userId']);
          $token = ($args['token']) ? ($args['token']) : null;
 
          //$sql = "SELECT nahrungID, Name, `Energie (cal)`, amount, stime FROM user_nahrung LEFT JOIN nahrung ON nahrung.nahrungId = user_nahrung.u_n_nahrungId AND user_nahrung.u_n_userId = '".$userId."'";

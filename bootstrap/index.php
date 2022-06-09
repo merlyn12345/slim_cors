@@ -100,17 +100,17 @@ $app->get('/submitform', function ($request, $response){
 
 $app->add(function ($request, $handler) {
     $params = $request->getServerParams();
-    $origin = $params['HTTP_ORIGIN'] ?? null;
+    //$origin = $params['HTTP_ORIGIN'];
 
     $response = $handler->handle($request);
-    $corsResponse =  $response
-        ->withHeader('Access-Control-Allow-Origin', $origin)
-        ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
-        ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-    if($origin){
-        return $corsResponse;
-    }
-    return $response;
+
+
+        return $response
+            ->withHeader('Access-Control-Allow-Origin', '*')
+            ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+            ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+
+
 });
 
 $app->any('/', '\App\Controller\AuthController:login');
