@@ -1,0 +1,12 @@
+{{> header.html}}
+
+<p><a href="/">Nahrungsmittel</a>&raquo;</p>
+{{#nahrungsmittel}}
+<p class="bike-icon">&#128690;</p>
+<h1>{{Name}}</h1>
+<p>{{nahrungID}} bike</p>
+<p>Weight: {{weight}}</p>
+<p>Aero: {{aero}}</p>
+{{/nahrungsmittel}}
+
+{{> footer.html}}

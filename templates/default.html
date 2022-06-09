@@ -1,0 +1,26 @@
+{{> header.html}}
+
+<h1>Welcome</h1>
+
+ <p>Welcome to the foodbook zone, you are logged in as {{user}}<br>
+ <a href="/logout">Logout</a>
+ </p>
+<nav>
+ <ul>
+  <li> <a href="/secure/submit">Eingabe</a></li>
+  <li> <a href="/secure/status">Status</a></li>
+  <li> <a href="/secure/shop">&quot;Shop&quot;</a></li>
+  <li> <a href="/secure/ext_shop">&quot;Shop&quot;</a></li>
+  <li> <a href="/secure/search">Suche</a></li>
+ </ul>
+</nav>
+
+<div id="message">
+ {{#items}}
+
+ <p></p>
+
+ {{/items}}
+</div>
+
+{{> footer.html}}

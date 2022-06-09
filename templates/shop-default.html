@@ -1,0 +1,18 @@
+{{> header.html}}
+
+<h1>Essen</h1>
+
+<div class="bikes">
+    {{#nahrungsmittel}}
+    <div>
+        <span>Zutat</span>
+        <h2><a href="details/{{nahrungID}}">{{Name}}</a></h2>
+        <p>Menge: {{amount}}<br>
+        Datum: {{stime}}<br>
+            Energie (cal): {{Energie (cal)}}
+        </p>
+    </div>
+    {{/nahrungsmittel}}
+</div>
+
+{{> footer.html}}
